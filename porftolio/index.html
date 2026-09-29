@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -79,7 +79,7 @@
   /* ---------- Navbar ---------- */
   header.nav{
     position: fixed; top:0; left:0; right:0; z-index: 100;
-    background: color-mix(in srgb, var(--bg) 86%, transparent);
+    background: var(--bg);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
@@ -156,12 +156,6 @@
   .btn-primary:hover{ opacity:0.86; transform: translateY(-1px); }
   .btn-ghost{ background: transparent; color: var(--text); }
   .btn-ghost:hover{ border-color: var(--accent); color: var(--accent); }
-
-  .hero-visual{ animation: rise 0.9s ease both 0.15s; }
-  .hero-name, .hero-role, .hero-intro, .hero-actions{ animation: rise 0.9s ease both; }
-  .hero-role{ animation-delay: 0.08s; }
-  .hero-intro{ animation-delay: 0.16s; }
-  .hero-actions{ animation-delay: 0.24s; }
   @keyframes rise{ from{ opacity:0; transform: translateY(14px);} to{ opacity:1; transform: translateY(0);} }
 
   /* ---------- About ---------- */
@@ -262,12 +256,11 @@
     background: var(--text); color: var(--bg); border-radius: 16px; padding: 64px 52px;
     display:flex; justify-content:space-between; align-items:flex-end; gap: 40px; flex-wrap:wrap;
   }
-  :root[data-theme="dark"] .contact-panel, @media (prefers-color-scheme: dark){ }
   .contact-panel h2{ color: var(--bg); font-size: clamp(1.7rem, 3.4vw, 2.3rem); max-width: 14ch; }
-  .contact-panel p{ color: color-mix(in srgb, var(--bg) 70%, transparent); margin-top: 14px; max-width: 46ch; }
+  .contact-panel p{ color: var(--bg); opacity: 0.75; margin-top: 14px; max-width: 46ch; }
   .contact-list{ display:flex; flex-direction:column; gap: 10px; }
   .contact-list a{
-    font-size: 0.98rem; color: var(--bg); border-bottom: 1px solid color-mix(in srgb, var(--bg) 30%, transparent);
+    font-size: 0.98rem; color: var(--bg); border-bottom: 1px solid currentColor;
     padding-bottom: 3px; width: fit-content; transition: opacity 0.2s ease;
   }
   .contact-list a:hover{ opacity: 0.75; }
@@ -630,8 +623,8 @@
         <a class="contact-cv" href="#" id="cvLinkContact">Download CV</a>
       </div>
       <div class="contact-list">
-        <a href="mailto:REPLACE_WITH_EMAIL@example.com">Layanbadralotaibi@gmail.com</a>
-        <a href="#" id="linkedinContact" target="_blank" rel="noopener">lhttps://www.linkedin.com/in/layan-alotaibi-27261531a?utm_source=share_via&utm_content=profile&utm_medium=member_ios</a>
+        <a href="mailto:Layanbadralotaibi@gmail.com">Layanbadralotaibi@gmail.com</a>
+        <a href="#" id="linkedinContact" target="_blank" rel="noopener">LinkedIn</a>
         <a href="#" id="githubContact" target="_blank" rel="noopener">github.com/REPLACE_ME</a>
       </div>
     </div>
